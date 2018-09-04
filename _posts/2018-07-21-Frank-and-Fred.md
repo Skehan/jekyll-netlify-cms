@@ -5,7 +5,7 @@ author: Hannah Healy
 categories:
 - casino
 permalink: Frank-And-Fred
-image: img/review/FFR.png
+image: img/FFR.png
 ---
 
 Frank & Fred Casino ist eine Online-Gaming-Website, die die Welt im wahrsten Sinne des Wortes im Sturm erobert. Mit einem Schwerpunkt auf der nordischen Region, insbesondere Finnland, Norwegen und Schweden, hat auch ein Großteil der übrigen Welt die Chance, zu spielen.

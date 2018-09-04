@@ -1,7 +1,7 @@
 [
   {
     "name": "Casino 1",
-    "img": "img/casinos/casinoLogo.png",
+    "img": "img/casinoLogo.png",
     "offer": "100% Bonus Match",
     "a-link": "https://www.facebook.com",
     "review": "/article2",
@@ -60,7 +60,7 @@
 
   {
     "name": "Casino 2",
-    "img": "img/casinos/casinoLogo2.png",
+    "img": "img/casinoLogo2.png",
     "offer": "200% Bonus Match",
     "a-link": "https://www.twitter.com",
     "review": "/article",
@@ -119,7 +119,7 @@
 
   {
     "name": "Casino 3",
-    "img": "img/casinos/casinoLogo3.png",
+    "img": "img/casinoLogo3.png",
     "offer": "500% Bonus Match",
     "a-link": "https://www.google.com",
     "review": "/article2",
@@ -178,7 +178,7 @@
 
   {
     "name": "Casino 4",
-    "img": "img/casinos/casinoLogo4.png",
+    "img": "img/casinoLogo4.png",
     "offer": "700% Bonus Match",
     "a-link": "https://www.bloomberg.com",
     "review": "/article",
@@ -237,7 +237,7 @@
 
   {
     "name": "Casino 5",
-    "img": "img/casinos/casinoLogo5.png",
+    "img": "img/casinoLogo5.png",
     "offer": "1010101010100% Bonus Match",
     "a-link": "https://www.cnn.com",
     "review": "/article",
