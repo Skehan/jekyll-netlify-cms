@@ -44,41 +44,48 @@ function setHash(state) {
     history.pushState(null, document.title, window.location.pathname + newHash); // or history.replaceState()
   }
 }
-
+var mixer1;
+var mixer2;
+var mixer3;
+container1 = document.querySelector('.containers');
+container2 = document.querySelector('.text-container');
+container3 = document.querySelector('.d-container');
 // Instantiate and configure the mixer
+if(container1){
+  mixer = mixitup('.containers', {
+    selectors: {
+      target: targetSelector
+    },
+    load: {
+      filter: getSelectorFromHash() // Ensure that the mixer's initial filter matches the URL on startup
 
-var mixer = mixitup('.containers', {
-  selectors: {
-    target: targetSelector
-  },
-  load: {
-    filter: getSelectorFromHash() // Ensure that the mixer's initial filter matches the URL on startup
+    },
+    callbacks: {
+      onMixEnd: setHash // Call the setHash() method at the end of each operation
+    }
+  });
+}
+if(container2){
+  mixer2 = mixitup('.text-container', {
+    selectors: {
+      target: targetSelector
+    },
+    load: {
+      filter: getSelectorFromHash() // Ensure that the mixer's initial filter matches the URL on startup
 
-  },
-  callbacks: {
-    onMixEnd: setHash // Call the setHash() method at the end of each operation
-  }
-});
-
-var mixer2 = mixitup('.text-container', {
-  selectors: {
-    target: targetSelector
-  },
-  load: {
-    filter: getSelectorFromHash() // Ensure that the mixer's initial filter matches the URL on startup
-
-  }
-});
-
-var mixer3 = mixitup('.d-container', {
-  selectors: {
-    target: targetSelector
-  },
-  load: {
-    filter: getSelectorFromHash() // Ensure that the mixer's initial filter matches the URL on startup
-  },
-});
-
+    }
+  });
+}
+if(container3){
+  mixer3 = mixitup('.d-container', {
+    selectors: {
+      target: targetSelector
+    },
+    load: {
+      filter: getSelectorFromHash() // Ensure that the mixer's initial filter matches the URL on startup
+    },
+  });
+}
 // Add an "onhashchange" handler to keep the mixer in sync as the user goes
 // back and forward through their history.
 
