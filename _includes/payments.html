@@ -1,0 +1,233 @@
+
+
+
+<div class="text-container text-center m-3">
+  <div class="row">
+    <div class="col-12 mix paypal">
+      {% include_relative _text/paypal.html %}
+    </div>
+    <div class="col-12 mix sofort">
+      {% include_relative _text/sofort.html %}
+    </div>
+    <div class="col-12 mix giropay">
+      {% include_relative _text/giropay.html %}
+    </div>
+    <div class="col-12 mix skrill">
+      {% include_relative _text/skrill.html %}
+    </div>
+    <div class="col-12 mix neteller">
+      {% include_relative _text/neteller.html %}
+    </div>
+    <div class="col-12 mix paysafecard">
+      {% include_relative _text/paysafecard.html %}
+    </div>
+    <div class="col-12 mix clicknpay">
+      {% include_relative _text/clicknpay.html %}
+    </div>
+    <div class="col-12 mix bank">
+      {% include_relative _text/bank.html %}
+    </div>
+    <div class="col-12 mix crypto">
+      {% include_relative _text/crypto.html %}
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="controls container">
+
+  <div class="row m-3 text-center">
+
+
+
+
+
+
+
+
+
+
+      <button type="button" class="col-2 btn btn-primaryz btn-sm btnSpecial" class="control" data-filter=".paypal" data-sort="paypal:desc"><img src="img/payments/PayPal.png" class="img-fluid" alt="paypal" /></button>
+      <button type="button" class="col-2 btn btn-primaryz btn-sm btnSpecial" class="control" data-filter=".sofort" data-sort="sofort:desc"><img src="img/payments/sofort.png" class="img-fluid" alt="sofort" /></button>
+      <button type="button" class="col-2 btn btn-primaryz btn-sm btnSpecial" class="control" data-filter=".giropay" data-sort="giropay:desc"><img src="img/payments/giropay.png" class="img-fluid" alt="giropay" /></button>
+
+
+
+
+      <button type="button" class="col-2 btn btn-primaryz btn-sm btnSpecial" class="control" data-filter=".skrill" data-sort="skrill:desc"><img src="img/payments/skrill.png" class="img-fluid" alt="Skrill" /></button>
+
+      <button type="button" class="col-2 btn btn-primaryz btn-sm btnSpecial" class="control" data-filter=".neteller" data-sort="neteller:desc"><img src="img/payments/neteller.png" class="img-fluid" alt="Neteller" /></button>
+      <button type="button" class="col-2 btn btn-primaryz btn-sm btnSpecial" class="control" data-filter=".paysafecard" data-sort="paysafecard:desc"><img src="img/payments/paysafecard.jpg" class="img-fluid" alt="paysafecard" /></button>
+      <button type="button" class="col-2 btn btn-primaryz btn-sm btnSpecial" class="control" data-filter=".clicknpay" data-sort="clicknpay:desc"><img src="img/payments/CnP.jpg" class="img-fluid" alt="CNP" /></button>
+      <button type="button" class="col-2 btn btn-primaryz btn-sm btnSpecial" class="control" data-filter=".bank" data-sort="bank:desc"><img src="img/payments/bank.png" class="img-fluid" alt="Bank" /></button>
+      <button type="button" class="col-2 btn btn-primaryz btn-sm btnSpecial" class="control" data-filter=".crypto" data-sort="crypto:desc"><img src="img/payments/crypto.png" class="img-fluid" alt="Crypto" /></button>
+
+
+
+
+
+
+
+  </div>
+
+  <!-- <button type="button" class="btn btn-primary" data-filter=".mobile">Mobile Casinos</button>
+  <button type="button" class="btn btn-primary" data-filter=".new">New Casinos</button> -->
+</div>
+
+
+
+
+
+<div class="containers text-center container mt-4">
+  <div class="row text-center">
+    {% for casino in site.data.casinos %}
+
+
+
+
+    <div class="mix
+    {% if casino.payment.paypal > 0 %}
+    paypal
+    {% endif %}
+    {% if casino.payment.sofort > 0 %}
+    sofort
+    {% endif %}
+    {% if casino.payment.giropay > 0 %}
+    giropay
+    {% endif %}
+    {% if casino.payment.skrill > 0 %}
+    skrill
+    {% endif %}
+    {% if casino.payment.neteller > 0 %}
+    neteller
+    {% endif %}
+    {% if casino.payment.paysafecard > 0 %}
+    paysafecard
+    {% endif %}
+    {% if casino.payment.clicknpay > 0 %}
+    clicknpay
+    {% endif %}
+    {% if casino.payment.bank > 0 %}
+    bank
+    {% endif %}
+    {% if casino.payment.crypto > 0 %}
+    crypto
+    {% endif %}
+    " data-paypal="{{ casino.payment.paypal }}" data-sofort="{{ casino.payment.sofort }}" data-giropay="{{ casino.payment.giropay }}" data-skrill="{{ casino.payment.skrill }}" data-neteller="{{ casino.payment.neteller }}" data-paysafecard="{{ casino.payment.paysafecard }}" data-clicknpay="{{ casino.payment.clicknpay }}" data-bank="{{ casino.payment.bank }}" data-crypto="{{ casino.payment.crypto }}" >
+
+    <!-- mobile -->
+    <div class="card col-12 ad d-block d-md-none">
+
+      <div class="row">
+
+
+        <div class="col-6">
+          <img class="rounded img-fluid" src="{{casino.img}}" alt="Card image">
+
+        </div>
+
+        <div class="col-6">
+          <h4 class="card-title p-2 pt-5">{{ casino.offer }}</h4>
+          <p>	★	★	★	★ ☆</p>
+
+        </div>
+      </div>
+      <div class="card-body">
+        <a href="{{ casino.a-link }}" class="btn btn-success btn-block">Claim Now</a>
+        <div class="text-center"><a href="{{ casino.review }}">Read Review</a></div>
+
+
+
+      </div>
+    </div>
+    <!-- !MOBILE -->
+  </div>
+
+  {% endfor %}
+</div>
+</div>
+
+
+
+<div class="d-container text-center container mt-4">
+  <div class="row text-center">
+    {% for casino in site.data.casinos %}
+    <!-- desktop version -->
+    <div class="mix
+    {% if casino.payment.paypal > 0 %}
+    paypal
+    {% endif %}
+    {% if casino.payment.sofort > 0 %}
+    sofort
+    {% endif %}
+    {% if casino.payment.giropay > 0 %}
+    giropay
+    {% endif %}
+    {% if casino.payment.skrill > 0 %}
+    skrill
+    {% endif %}
+    {% if casino.payment.neteller > 0 %}
+    neteller
+    {% endif %}
+    {% if casino.payment.paysafecard > 0 %}
+    paysafecard
+    {% endif %}
+    {% if casino.payment.clicknpay > 0 %}
+    clicknpay
+    {% endif %}
+    {% if casino.payment.bank > 0 %}
+    bank
+    {% endif %}
+    {% if casino.payment.crypto > 0 %}
+    crypto
+    {% endif %}
+    col-4 ad" data-paypal="{{ casino.payment.paypal }}" data-sofort="{{ casino.payment.sofort }}" data-giropay="{{ casino.payment.giropay }}" data-skrill="{{ casino.payment.skrill }}" data-neteller="{{ casino.payment.neteller }}" data-paysafecard="{{ casino.payment.paysafecard }}" data-clicknpay="{{ casino.payment.clicknpay }}" data-bank="{{ casino.payment.bank }}" data-crypto="{{ casino.payment.crypto }}">
+
+
+
+
+
+
+
+
+
+    <div class="card col-12 casino-card mb-3 d-none d-lg-block shadow">
+
+      <div class="row content">
+
+        <div class="col-12 frame">
+          <span class="helper"></span>
+
+
+
+          <img class="img-fluid desktop-image" src="{{casino.img}}" alt="Card image">
+
+        </div>
+
+        <div class="card-body dbody">
+
+
+          <h4 class="card-title">{{ casino.offer }}</h4>
+          <p>	★	★	★	★ ☆</p>
+
+        </div>
+
+      </div>
+
+      <div class="overlay">
+        <a href="{{ casino.a-link }}" class="btn btn-success btn-block btn-sq"><h1><strong>Claim Now</strong></h1></a>
+        <div class="text-center"><a href="{{ casino.review }}" class="btn mt-2 btn-outline-success">Read Review</a></div>
+
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+  {% endfor %}
+</div>
+</div>

@@ -1,0 +1,226 @@
+
+
+        <div class="text-container text-center m-3">
+          <div class="row">
+            <div class="col-12 mix baccarat">
+              {% include_relative _text/baccarat.html %}
+            </div>
+            <div class="col-12 mix blackjack">
+              {% include_relative _text/blackjack.html %}
+            </div>
+            <div class="col-12 mix roulette">
+              {% include_relative _text/roulette.html %}
+            </div>
+            <div class="col-12 mix poker">
+              {% include_relative _text/poker.html %}
+            </div>
+            <div class="col-12 mix slots">
+              {% include_relative _text/slots.html %}
+            </div>
+            <div class="col-12 mix sports">
+              {% include_relative _text/sports.html %}
+            </div>
+            <div class="col-12 mix keno">
+              {% include_relative _text/keno.html %}
+            </div>
+            <div class="col-12 mix lotteries">
+              {% include_relative _text/lotteries.html %}
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="controls">
+
+          <div class="row m-3 text-center">
+
+            <div class="col-12">
+
+
+
+
+              <button type="button" class="btn btn-primary btn-sm btnSpecial" class="control" data-filter=".baccarat" data-sort="baccarat:desc">Baccarat</button>
+
+
+
+
+
+
+              <button type="button" class="btn btn-primary btn-sm btnSpecial" class="control" data-filter=".blackjack" data-sort="blackjack:desc">BlackJack</button>
+
+
+              <button type="button" class="btn btn-primary btn-sm btnSpecial" class="control" data-filter=".roulette" data-sort="roulette:desc">Roulette</button>
+
+
+
+
+              <button type="button" class="btn btn-primary btn-sm btnSpecial" class="control" data-filter=".poker" data-sort="poker:desc">Poker</button>
+
+                      <button type="button" class="btn btn-primary btn-sm btnSpecial" class="control" data-filter=".slots" data-sort="slots:desc">Slots</button>
+
+                      <button type="button" class="btn btn-primary btn-sm btnSpecial" class="control" data-filter=".sports" data-sort="sports:desc">Sports</button>
+
+                      <button type="button" class="btn btn-primary btn-sm btnSpecial" class="control" data-filter=".keno" data-sort="keno:desc">Keno</button>
+
+                      <button type="button" class="btn btn-primary btn-sm btnSpecial" class="control" data-filter=".lotteries" data-sort="lotteries:desc">Lotteries</button>
+
+              </div>
+            </div>
+
+            <!-- <button type="button" class="btn btn-primary" data-filter=".mobile">Mobile Casinos</button>
+            <button type="button" class="btn btn-primary" data-filter=".new">New Casinos</button> -->
+          </div>
+
+
+
+
+
+        <div class="containers text-center container mt-4">
+          <div class="row text-center">
+            {% for casino in site.data.casinos %}
+
+
+
+
+            <div class="mix
+            {% if casino.games.baccarat > 0 %}
+            baccarat
+            {% endif %}
+            {% if casino.games.blackjack > 0 %}
+            blackjack
+            {% endif %}
+            {% if casino.games.roulette > 0 %}
+            roulette
+            {% endif %}
+            {% if casino.games.poker > 0 %}
+            poker
+            {% endif %}
+            {% if casino.games.slots > 0 %}
+            slots
+            {% endif %}
+            {% if casino.games.sports > 0 %}
+            sports
+            {% endif %}
+            {% if casino.games.keno > 0 %}
+            keno
+            {% endif %}
+            {% if casino.games.lotteries > 0 %}
+            lotteries
+            {% endif %}
+
+
+            " data-baccarat="{{ casino.games.baccarat }}" data-blackjack="{{ casino.games.blackjack }}" data-roulette"{{ casino.games.roulette }}" data-poker="{{ casino.games.poker }}" data-slots="{{ casino.games.slots }}" data-sports="{{ casino.games.sports }}" data-keno="{{ casino.games.keno }}" data-lotteries="{{ casino.games.lotteries }}"  >
+
+            <!-- mobile -->
+            <div class="card col-12 ad d-block d-lg-none">
+
+              <div class="row">
+
+
+                <div class="col-6">
+                  <img class="rounded img-fluid" src="{{casino.img}}" alt="Card image">
+
+                </div>
+
+                <div class="col-6">
+                  <h4 class="card-title p-2 pt-5">{{ casino.offer }}</h4>
+                  <p>	★	★	★	★ ☆</p>
+
+                </div>
+              </div>
+              <div class="card-body">
+                <a href="{{ casino.a-link }}" class="btn btn-success btn-block">Claim Now</a>
+                <div class="text-center"><a href="{{ casino.review }}">Read Review</a></div>
+
+
+
+              </div>
+            </div>
+            <!-- !MOBILE -->
+          </div>
+
+          {% endfor %}
+        </div>
+      </div>
+
+
+
+      <div class="d-container text-center container mt-4">
+        <div class="row text-center">
+          {% for casino in site.data.casinos %}
+          <!-- desktop version -->
+          <div class="mix
+          {% if casino.games.baccarat > 0 %}
+          baccarat
+          {% endif %}
+          {% if casino.games.blackjack > 0 %}
+          blackjack
+          {% endif %}
+          {% if casino.games.roulette > 0 %}
+          roulette
+          {% endif %}
+          {% if casino.games.poker > 0 %}
+          poker
+          {% endif %}
+          {% if casino.games.slots > 0 %}
+          slots
+          {% endif %}
+          {% if casino.games.sports > 0 %}
+          sports
+          {% endif %}
+          {% if casino.games.keno > 0 %}
+          keno
+          {% endif %}
+          {% if casino.games.lotteries > 0 %}
+          lotteries
+          {% endif %}
+               col-4 ad" data-baccarat="{{ casino.games.baccarat }}" data-blackjack="{{ casino.games.blackjack }}" data-roulette"{{ casino.games.roulette }}" data-poker="{{ casino.games.poker }}" data-slots="{{ casino.games.slots }}" data-sports="{{ casino.games.sports }}" data-keno="{{ casino.games.keno }}" data-lotteries="{{ casino.games.lotteries }}"a>
+
+
+
+
+
+
+
+
+
+               <div class="card col-12 casino-card mb-3 d-none d-lg-block shadow">
+
+                 <div class="row content">
+
+                   <div class="col-12 frame">
+                     <span class="helper"></span>
+
+
+
+                       <img class="img-fluid desktop-image" src="{{casino.img}}" alt="Card image">
+
+                   </div>
+
+                   <div class="card-body dbody">
+
+
+                     <h4 class="card-title">{{ casino.offer }}</h4>
+                     <p>	★	★	★	★ ☆</p>
+
+                   </div>
+
+                 </div>
+
+                 <div class="overlay">
+                 <a href="{{ casino.a-link }}" class="btn btn-success btn-block btn-sq"><h1><strong>Claim Now</strong></h1></a>
+                 <div class="text-center"><a href="{{ casino.review }}" class="btn mt-2 btn-outline-success">Read Review</a></div>
+
+
+
+               </div>
+             </div>
+
+            </div>
+
+
+        {% endfor %}
+      </div>
+    </div>

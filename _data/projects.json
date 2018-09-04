@@ -1,0 +1,74 @@
+[
+  {
+    "category": "New",
+    "img": "img/portfolio/work1.jpg",
+    "title": "REALLY TESTING",
+    "content": "Exlusive Offer"
+  },
+  {
+    "category": "Mobile",
+    "img": "img/portfolio/work2.jpg",
+    "title": "Example Casino",
+    "content": "Exlusive Offer"
+  },
+  {
+    "category": "Live",
+    "img": "img/portfolio/work3.jpg",
+    "title": "Example Casino",
+    "content": "Exlusive Offer"
+  },
+  {
+    "category": "Bonuses",
+    "img": "img/portfolio/work4.jpg",
+    "title": "Example Casino",
+    "content": "Exlusive Offer"
+  },
+  {
+    "category": "New",
+    "img": "img/portfolio/work5.jpg",
+    "title": "Example Casino 2",
+    "content": "Exlusive Offer"
+  },
+  {
+    "category": "Live",
+    "img": "img/portfolio/work6.jpg",
+    "title": "Example Casino",
+    "content": "Exlusive Offer"
+  },
+  {
+    "category": "New",
+    "img": "img/portfolio/work1.jpg",
+    "title": "Example Casino 3",
+    "content": "Exlusive Offer"
+  },
+  {
+    "category": "Mobile",
+    "img": "img/portfolio/work2.jpg",
+    "title": "Example Casino",
+    "content": "Exlusive Offer"
+  },
+  {
+    "category": "Live",
+    "img": "img/portfolio/work3.jpg",
+    "title": "Example Casino",
+    "content": "Exlusive Offer"
+  },
+  {
+    "category": "Bonuses",
+    "img": "img/portfolio/work4.jpg",
+    "title": "Example Casino",
+    "content": "Exlusive Offer"
+  },
+  {
+    "category": "New",
+    "img": "img/portfolio/work5.jpg",
+    "title": "Example Casino 4",
+    "content": "Exlusive Offer"
+  },
+  {
+    "category": "Live",
+    "img": "img/portfolio/work6.jpg",
+    "title": "Example Casino",
+    "content": "Exlusive Offer"
+  },
+]

@@ -1,0 +1,229 @@
+
+
+
+<div class="text-container text-center m-3">
+  <div class="row">
+    <div class="col-12 mix all-bonuses">
+      {% include_relative _text/all-bonuses.html %}
+    </div>
+    <div class="col-12 mix min-deposit">
+      {% include_relative _text/min-deposit.html %}
+    </div>
+    <div class="col-12 mix no-deposit">
+      {% include_relative _text/no-deposit.html %}
+    </div>
+    <div class="col-12 mix freespins">
+      {% include_relative _text/freespins.html %}
+    </div>
+    <div class="col-12 mix reload">
+      {% include_relative _text/reload.html %}
+    </div>
+    <div class="col-12 mix high-roller">
+      {% include_relative _text/high-roller.html %}
+    </div>
+    <div class="col-12 mix cash-back">
+      {% include_relative _text/cash-back.html %}
+    </div>
+    <div class="col-12 mix payment-method">
+      {% include_relative _text/payment-method.html %}
+    </div>
+    <div class="col-12 mix deposit">
+      {% include_relative _text/deposit.html %}
+    </div>
+    <div class="col-12 mix welcome">
+      {% include_relative _text/welcome.html %}
+    </div>
+  </div>
+</div>
+
+
+<div class="controls">
+
+  <div class="row m-3 text-center">
+
+    <div class="col-12">
+      <button type="button" class="btn btn-primary btn-sm btnSpecial col-md-2 col-sm-3 col-3" class="control" data-filter=".all-bonuses" data-sort="all-bonuses:desc">Alle Bonusse</button>
+      <button type="button" class="btn btn-primary btn-sm btnSpecial col-md-2 col-sm-3 col-3" class="control" data-filter=".min-deposit" data-sort="min-deposit:desc">Min-Deposit</button>
+      <button type="button" class="btn btn-primary btn-sm btnSpecial col-md-2 col-sm-3 col-3" class="control" data-filter=".no-deposit" data-sort="no-deposit:desc">No-Deposit</button>
+      <button type="button" class="btn btn-primary btn-sm btnSpecial col-md-2 col-sm-3 col-3" class="control" data-filter=".freespins" data-sort="freespins:desc">FreeSpins</button>
+      <button type="button" class="btn btn-primary btn-sm btnSpecial col-md-2 col-sm-3 col-3" class="control" data-filter=".reload" data-sort="reload:desc">Reload</button>
+      <button type="button" class="btn btn-primary btn-sm btnSpecial col-md-2 col-sm-3 col-3" class="control" data-filter=".high-roller" data-sort="high-roller:desc">High-Roller</button>
+      <button type="button" class="btn btn-primary btn-sm btnSpecial col-md-2 col-sm-3 col-3" class="control" data-filter=".cash-back" data-sort="cash-back:desc">Cash-Back</button>
+      <button type="button" class="btn btn-primary btn-sm btnSpecial col-md-2 col-sm-3 col-3" class="control" data-filter=".payment-method" data-sort="payment-method:desc">Zahlungsmethode</button>
+      <button type="button" class="btn btn-primary btn-sm btnSpecial col-md-2 col-sm-3 col-3" class="control" data-filter=".deposit" data-sort="deposit:desc">Deposit-Match</button>
+      <button type="button" class="btn btn-primary btn-sm btnSpecial col-md-2 col-sm-3 col-3" class="control" data-filter=".welcome" data-sort="welcome:desc">Willkommensbonus</button>
+
+
+
+    </div>
+  </div>
+
+  <!-- <button type="button" class="btn btn-primary" data-filter=".mobile">Mobile Casinos</button>
+  <button type="button" class="btn btn-primary" data-filter=".new">New Casinos</button> -->
+</div>
+
+
+
+
+
+
+<div class="containers text-center container mt-4">
+  <div class="row text-center">
+    {% for casino in site.data.casinos %}
+
+
+
+
+    <div class="mix
+    {% if casino.bonuses.all-bonuses > 0 %}
+    all-bonuses
+    {% endif %}
+    {% if casino.bonuses.min-deposit-bonus > 0 %}
+    min-deposit
+    {% endif %}
+    {% if casino.bonuses.nodeposit > 0 %}
+    no-deposit
+    {% endif %}
+    {% if casino.bonuses.freespins > 0 %}
+    freespins
+    {% endif %}
+    {% if casino.bonuses.reload > 0 %}
+    reload
+    {% endif %}
+    {% if casino.bonuses.high-roller > 0 %}
+    high-roller
+    {% endif %}
+    {% if casino.bonuses.cash-back > 0 %}
+    cash-back
+    {% endif %}
+    {% if casino.bonuses.payment-method > 0 %}
+    payment-method
+    {% endif %}
+    {% if casino.bonuses.deposit-match > 0 %}
+    deposit
+    {% endif %}
+    {% if casino.bonuses.welcome-bonus > 0 %}
+    welcome
+    {% endif %}
+    " data-all-bonuses="{{ casino.bonuses.all-bonuses }}" data-min-deposit="{{ casino.bonuses.min-deposit-bonus }}" data-no-deposit="{{ casino.bonuses.nodeposit }}" data-freespins="{{ casino.bonuses.freespins }}" data-reload="{{ casino.bonuses.reload }}" data-high-roller="{{ casino.bonuses.high-roller }}" data-cash-back="{{ casino.bonuses.cash-back }}" data-payment-method="{{ casino.bonuses.payment-method }}" data-deposit="{{ casino.bonuses.deposit-match }}"
+    data-welcome="{{ casino.bonuses.welcome-bonus }}">
+
+    <!-- mobile -->
+    <div class="card col-12 ad d-block d-md-none">
+
+      <div class="row">
+
+
+        <div class="col-6">
+          <img class="rounded img-fluid" src="{{casino.img}}" alt="Card image">
+
+        </div>
+
+        <div class="col-6">
+          <h4 class="card-title p-2 pt-5">{{ casino.offer }}</h4>
+          <p>	★	★	★	★ ☆</p>
+
+        </div>
+      </div>
+      <div class="card-body">
+        <a href="{{ casino.a-link }}" class="btn btn-success btn-block">Claim Now</a>
+        <div class="text-center"><a href="{{ casino.review }}">Read Review</a></div>
+
+
+
+      </div>
+    </div>
+    <!-- !MOBILE -->
+  </div>
+
+  {% endfor %}
+</div>
+</div>
+
+
+
+<div class="d-container text-center container mt-4">
+  <div class="row text-center">
+    {% for casino in site.data.casinos %}
+    <!-- desktop version -->
+    <div class="mix
+    {% if casino.bonuses.all-bonuses > 0 %}
+    all-bonuses
+    {% endif %}
+    {% if casino.bonuses.min-deposit-bonus > 0 %}
+    min-deposit
+    {% endif %}
+    {% if casino.bonuses.nodeposit > 0 %}
+    no-deposit
+    {% endif %}
+    {% if casino.bonuses.freespins > 0 %}
+    freespins
+    {% endif %}
+    {% if casino.bonuses.reload > 0 %}
+    reload
+    {% endif %}
+    {% if casino.bonuses.high-roller > 0 %}
+    high-roller
+    {% endif %}
+    {% if casino.bonuses.cash-back > 0 %}
+    cash-back
+    {% endif %}
+    {% if casino.bonuses.payment-method > 0 %}
+    payment-method
+    {% endif %}
+    {% if casino.bonuses.deposit-match > 0 %}
+    deposit
+    {% endif %}
+    {% if casino.bonuses.welcome-bonus > 0 %}
+    welcome
+    {% endif %}
+
+    col-4 ad" data-all-bonuses="{{ casino.bonuses.all-bonuses }}" data-min-deposit="{{ casino.bonuses.min-deposit-bonus }}" data-no-deposit="{{ casino.bonuses.nodeposit }}" data-freespins="{{ casino.bonuses.freespins }}" data-reload="{{ casino.bonuses.reload }}" data-high-roller="{{ casino.bonuses.high-roller }}" data-cash-back="{{ casino.bonuses.cash-back }}" data-payment-method="{{ casino.bonuses.payment-method }}" data-deposit="{{ casino.bonuses.deposit-match }}"
+    data-welcome="{{ casino.bonuses.welcome-bonus }}">
+
+
+
+
+
+
+
+
+
+    <div class="card col-12 casino-card mb-3 d-none d-lg-block shadow">
+
+      <div class="row content">
+
+        <div class="col-12 frame">
+          <span class="helper"></span>
+
+
+
+          <img class="img-fluid desktop-image" src="{{casino.img}}" alt="Card image">
+
+        </div>
+
+        <div class="card-body dbody">
+
+
+          <h4 class="card-title">{{ casino.offer }}</h4>
+          <p>	★	★	★	★ ☆</p>
+
+        </div>
+
+      </div>
+
+      <div class="overlay">
+        <a href="{{ casino.a-link }}" class="btn btn-success btn-block btn-sq"><h1><strong>Claim Now</strong></h1></a>
+        <div class="text-center"><a href="{{ casino.review }}" class="btn mt-2 btn-outline-success">Read Review</a></div>
+
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+  {% endfor %}
+</div>
+</div>

@@ -1,0 +1,183 @@
+
+
+
+<div class="text-container text-center m-3">
+  <div class="row">
+    <div class="col-12 mix live">
+      {% include_relative _text/live.html %}
+    </div>
+    <div class="col-12 mix rating">
+      {% include_relative _text/rating.html %}
+    </div>
+    <div class="col-12 mix mobile">
+      {% include_relative _text/mobile.html %}
+    </div>
+    <div class="col-12 mix new">
+      {% include_relative _text/new.html %}
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="controls">
+
+  <div class="row m-3 text-center">
+
+    <div class="col-12">
+
+
+
+
+
+      <button type="button" class="btn btn-primary btn-sm btnSpecial" class="control" data-filter=".rating" data-sort="rating:desc">Rating</button>
+
+
+
+
+
+
+      <button type="button" class="btn btn-primary btn-sm btnSpecial" class="control" data-filter=".new" data-sort="new:desc">New</button>
+
+
+      <button type="button" class="btn btn-primary btn-sm btnSpecial" class="control" data-filter=".live" data-sort="live:desc">Live</button>
+
+
+
+
+      <button type="button" class="btn btn-primary btn-sm btnSpecial" class="control" data-filter=".mobile" data-sort="mobile:desc">Mobile</button>
+
+
+    </div>
+  </div>
+
+  <!-- <button type="button" class="btn btn-primary" data-filter=".mobile">Mobile Casinos</button>
+  <button type="button" class="btn btn-primary" data-filter=".new">New Casinos</button> -->
+</div>
+
+
+
+
+<div class="p-1 m-1">
+
+
+  <div class="containers text-center container-fluid mt-4">
+    <div class="row text-center">
+      {% for casino in site.data.casinos %}
+
+
+
+
+      <div class="mix
+      {% if casino.mobile > 0 %}
+      mobile
+      {% endif %}
+      {% if casino.live > 0 %}
+      live
+      {% endif %}
+      {% if casino.new > 0 %}
+      new
+      {% endif %}
+      {% if casino.rating > 0 %}
+      rating
+      {% endif %}
+      col-md-6 col-sm-12" data-rating="{{ casino.rating }}" data-mobile="{{ casino.mobile }}" data-live="{{ casino.live }}" data-new="{{ casino.new }}">
+
+      <!-- mobile -->
+      <div class="card col-12 ad d-block d-lg-none m-1 shadow-sm">
+
+        <div class="row">
+
+
+          <div class="col-6">
+            <img class="rounded img-fluid" src="{{casino.img}}" alt="Card image">
+
+          </div>
+
+          <div class="col-6">
+            <h4 class="card-title p-2 pt-5">{{ casino.offer }}</h4>
+            <p>	★	★	★	★ ☆</p>
+
+          </div>
+        </div>
+        <div class="card-body">
+          <a href="{{ casino.a-link }}" class="btn btn-success btn-block">Claim Now</a>
+          <div class="text-center"><a href="{{ casino.review }}">Read Review</a></div>
+
+
+
+        </div>
+      </div>
+      <!-- !MOBILE -->
+    </div>
+
+    {% endfor %}
+  </div>
+</div>
+</div>
+
+
+
+<div class=" text-center container d-container">
+  <div class="row text-center">
+    {% for casino in site.data.casinos %}
+    <!-- desktop version -->
+
+    <div class="mix
+    {% if casino.mobile > 0 %}
+    mobile
+    {% endif %}
+    {% if casino.live > 0 %}
+    live
+    {% endif %}
+    {% if casino.new > 0 %}
+    new
+    {% endif %}
+    {% if casino.rating > 0 %}
+    rating
+    {% endif %}
+    col-4 ad" data-rating="{{ casino.rating }}" data-mobile="{{ casino.mobile }}" data-live="{{ casino.live }}" data-new="{{ casino.new }}">
+
+
+    <div class="card col-12 casino-card mb-3 d-none d-lg-block shadow">
+
+      <div class="row content">
+
+        <div class="col-12 frame">
+          <span class="helper"></span>
+
+
+
+            <img class="img-fluid desktop-image" src="{{casino.img}}" alt="Card image">
+
+        </div>
+
+        <div class="card-body dbody">
+
+
+          <h4 class="card-title">{{ casino.offer }}</h4>
+          <p>	★	★	★	★ ☆</p>
+
+        </div>
+
+      </div>
+
+      <div class="overlay">
+      <a href="{{ casino.a-link }}" class="btn btn-success btn-block btn-sq"><h1><strong>Claim Now</strong></h1></a>
+      <div class="text-center"><a href="https://localhost:4000/{{ casino.review }}" class="btn mt-2 btn-outline-success">Read Review</a></div>
+
+
+
+    </div>
+  </div>
+
+
+
+
+</div>
+
+
+{% endfor %}
+</div>
+</div>

@@ -1,0 +1,247 @@
+
+
+<div class="text-container text-center m-3">
+  <div class="row">
+    <div class="col-12 mix merkur">
+      {% include_relative _text/merkur.html %}
+    </div>
+    <div class="col-12 mix novo">
+      {% include_relative _text/novo.html %}
+    </div>
+    <div class="col-12 mix amaya">
+      {% include_relative _text/amaya.html %}
+    </div>
+    <div class="col-12 mix microgaming">
+      {% include_relative _text/microgaming.html %}
+    </div>
+    <div class="col-12 mix netent">
+      {% include_relative _text/netent.html %}
+    </div>
+    <div class="col-12 mix skillonnet">
+      {% include_relative _text/skillonnet.html %}
+    </div>
+    <div class="col-12 mix nextgen">
+      {% include_relative _text/nextgen.html %}
+    </div>
+    <div class="col-12 mix nyx">
+      {% include_relative _text/nyx.html %}
+    </div>
+    <div class="col-12 mix playngo">
+      {% include_relative _text/playngo.html %}
+    </div>
+    <div class="col-12 mix evolution">
+      {% include_relative _text/evolution.html %}
+    </div>
+    <div class="col-12 mix ygg">
+      {% include_relative _text/ygg.html %}
+    </div>
+    <div class="col-12 mix sg">
+      {% include_relative _text/sg.html %}
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="controls container">
+
+  <div class="row m-3 text-center">
+
+
+
+    <button type="button" class="col-2 btn btn-primaryz btn-sm btnSpecial" class="control" data-filter=".merkur" data-sort="merkur:desc"><img src="img/software/merkur.png" class="img-fluid" alt="merkur"/></button>
+    <button type="button" class="col-2 btn btn-primaryz btn-sm btnSpecial" class="control" data-filter=".novo" data-sort="novo:desc"><img src="img/software/novo.png" class="img-fluid" alt="novo"/></button>
+    <button type="button" class="col-2 btn btn-primaryz btn-sm btnSpecial" class="control" data-filter=".amaya" data-sort="amaya:desc"><img src="img/software/amaya.jpeg" class="img-fluid" alt="amaya"/></button>
+    <button type="button" class="col-2 btn btn-primaryz btn-sm btnSpecial" class="control" data-filter=".microgaming" data-sort=".microgaming:desc"><img src="img/software/microgaming-casinos-uk.jpg" class="img-fluid" alt="microgaming"/></button>
+    <button type="button" class="col-2 btn btn-primaryz btn-sm btnSpecial" class="control" data-filter=".netent" data-sort="netent:desc"><img src="img/software/netent-logo-whitegreen.jpg" class="img-fluid" alt="netent"/></button>
+    <button type="button" class="col-2 btn btn-primaryz btn-sm btnSpecial" class="control" data-filter=".skillonnet" data-sort="skillonnet:desc"><img src="img/software/skillonnet.jpg" class="img-fluid" alt="skillonnet"/></button>
+    <button type="button" class="col-2 btn btn-primaryz btn-sm btnSpecial" class="control" data-filter=".nextgen" data-sort="nextgen:desc"><img src="img/software/nextgen.png" class="img-fluid" alt="nextgen"/></button>
+
+    <button type="button" class="col-2 btn btn-primaryz btn-sm btnSpecial" class="control" data-filter=".nyx" data-sort="nyx:desc"><img src="img/software/nyx.png" class="img-fluid" alt="nyx"/></button>
+    <button type="button" class="col-2 btn btn-primaryz btn-sm btnSpecial" class="control" data-filter=".playngo" data-sort="playngo:desc"><img src="img/software/play'n'go.png" class="img-fluid" alt="playngo"/></button>
+    <button type="button" class="col-2 btn btn-primaryz btn-sm btnSpecial" class="control" data-filter=".evolution" data-sort="evolution:desc"><img src="img/software/evolution-gaming-logo.jpg" class="img-fluid" alt="evolution"/></button>
+    <button type="button" class="col-2 btn btn-primaryz btn-sm btnSpecial" class="control" data-filter=".ygg" data-sort="ygg:desc"><img src="img/software/yggdrasil.png" class="img-fluid" alt="ygg"/></button>
+    <button type="button" class="col-2 btn btn-primaryz btn-sm btnSpecial" class="control" data-filter=".sg" data-sort="sg:desc"><img src="img/software/sg-logo-color-2017.png" class="img-fluid" alt="sg"/></button>
+
+
+
+  </div>
+
+  <!-- <button type="button" class="btn btn-primary" data-filter=".mobile">Mobile Casinos</button>
+  <button type="button" class="btn btn-primary" data-filter=".new">New Casinos</button> -->
+</div>
+
+
+
+<div class="containers text-center container mt-4">
+  <div class="row text-center">
+    {% for casino in site.data.casinos %}
+
+
+
+
+    <div class="mix
+    {% if casino.software.merkur > 0 %}
+    merkur
+    {% endif %}
+    {% if casino.software.novo > 0 %}
+    novo
+    {% endif %}
+    {% if casino.software.amaya > 0 %}
+    amaya
+    {% endif %}
+    {% if casino.software.microgaming > 0 %}
+    microgaming
+    {% endif %}
+    {% if casino.software.netent > 0 %}
+    netent
+    {% endif %}
+    {% if casino.software.skillonnet > 0 %}
+    skillonnet
+    {% endif %}
+    {% if casino.software.nextgengaming > 0 %}
+    nextgen
+    {% endif %}
+    {% if casino.software.nyx > 0 %}
+    nyx
+    {% endif %}
+    {% if casino.software.playngo > 0 %}
+    playngo
+    {% endif %}
+    {% if casino.software.evolutiongaming > 0 %}
+    evolution
+    {% endif %}
+    {% if casino.software.yggdrasil > 0 %}
+    ygg
+    {% endif %}
+    {% if casino.software.sginteractive > 0 %}
+    sg
+    {% endif %}
+
+    "  data-merkur="{{ casino.software.merkur }}" data-novo="{{ casino.software.novo }}" data-amaya="{{ casino.software.amaya }}" data-microgaming="{{ casino.software.microgaming }}" data-netent="{{ casino.software.netent }}" data-skillonnet="{{ casino.software.skillonnet }}" data-nextgen="{{ casino.software.nextgengaming }}"  data-nyx="{{ casino.software.nyx }}"  data-playngo="{{ casino.software.playngo }}"  data-evolution="{{ casino.software.evolutiongaming }}" data-ygg="{{ casino.software.yggdrasil }}" data-sg="{{ casino.software.sginteractive }}">
+
+    <!-- mobile -->
+    <div class="card col-12 ad d-block d-md-none">
+
+      <div class="row">
+
+
+        <div class="col-6">
+          <img class="rounded img-fluid" src="{{casino.img}}" alt="Card image">
+
+        </div>
+
+        <div class="col-6">
+          <h4 class="card-title p-2 pt-5">{{ casino.offer }}</h4>
+          <p>	★	★	★	★ ☆</p>
+
+        </div>
+      </div>
+      <div class="card-body">
+        <a href="{{ casino.a-link }}" class="btn btn-success btn-block">Claim Now</a>
+        <div class="text-center"><a href="{{ casino.review }}">Read Review</a></div>
+
+
+
+      </div>
+    </div>
+    <!-- !MOBILE -->
+  </div>
+
+  {% endfor %}
+</div>
+</div>
+
+
+
+<div class="d-container text-center container mt-4">
+  <div class="row text-center">
+    {% for casino in site.data.casinos %}
+    <!-- desktop version -->
+    <div class="mix
+    {% if casino.software.merkur > 0 %}
+    merkur
+    {% endif %}
+    {% if casino.software.novo > 0 %}
+    novo
+    {% endif %}
+    {% if casino.software.amaya > 0 %}
+    amaya
+    {% endif %}
+    {% if casino.software.microgaming > 0 %}
+    microgaming
+    {% endif %}
+    {% if casino.software.netent > 0 %}
+    netent
+    {% endif %}
+    {% if casino.software.skillonnet > 0 %}
+    skillonnet
+    {% endif %}
+    {% if casino.software.nextgengaming > 0 %}
+    nextgen
+    {% endif %}
+    {% if casino.software.nyx > 0 %}
+    nyx
+    {% endif %}
+    {% if casino.software.playngo > 0 %}
+    playngo
+    {% endif %}
+    {% if casino.software.evolutiongaming > 0 %}
+    evolution
+    {% endif %}
+    {% if casino.software.yggdrasil > 0 %}
+    ygg
+    {% endif %}
+    {% if casino.software.sginteractive > 0 %}
+    sg
+    {% endif %}
+    col-4 ad" data-merkur="{{ casino.software.merkur }}" data-novo="{{ casino.software.novo }}" data-amaya="{{ casino.software.amaya }}" data-microgaming="{{ casino.software.microgaming }}" data-netent="{{ casino.software.netent }}" data-skillonnet="{{ casino.software.skillonnet }}" data-nextgen="{{ casino.software.nextgengaming }}"  data-nyx="{{ casino.software.nyx }}"  data-playngo="{{ casino.software.playngo }}"  data-evolution="{{ casino.software.evolutiongaming }}" data-ygg="{{ casino.software.yggdrasil }}" data-sg="{{ casino.software.sginteractive }}">
+
+
+
+
+
+
+
+
+
+    <div class="card col-12 casino-card mb-3 d-none d-lg-block shadow">
+
+      <div class="row content">
+
+        <div class="col-12 frame">
+          <span class="helper"></span>
+
+
+
+          <img class="img-fluid desktop-image" src="{{casino.img}}" alt="Card image">
+
+        </div>
+
+        <div class="card-body dbody">
+
+
+          <h4 class="card-title">{{ casino.offer }}</h4>
+          <p>	★	★	★	★ ☆</p>
+
+        </div>
+
+      </div>
+
+      <div class="overlay">
+        <a href="{{ casino.a-link }}" class="btn btn-success btn-block btn-sq"><h1><strong>Claim Now</strong></h1></a>
+        <div class="text-center"><a href="{{ casino.review }}" class="btn mt-2 btn-outline-success">Read Review</a></div>
+
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+  {% endfor %}
+</div>
+</div>

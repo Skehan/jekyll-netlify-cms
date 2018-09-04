@@ -1,0 +1,38 @@
+<!-- Blog HTML -->
+<section id="blog">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1 col-md-10 offset-md-1">
+        {% for post in site.posts %}
+        <!--
+        <hr>
+
+        <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+
+        <p class="lead">by <a href="#">{{ post.author }}</a></p>
+        <p><span class="glyphicon glyphicon-time"></span> Posted on {{ post.date | date: "%B %d, %Y" }}</p>
+        {% if post.image %}
+        <img class="img-fluid blogimg" src="{{ post.image }}" alt="{{ post.title }}" >
+
+        {% endif %}
+        {{ post.lead }}
+
+      --><a href="{{ post.url }}">
+
+      <div class="card review shadow m-5 p-3">
+        {% if post.image %}
+
+        <img class="card-img-top img-fluid blogimg" src="{{ post.image }}" alt="{{ post.title }}">
+        {% endif %}
+
+        <div class="card-body">
+          <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+          <a class="btn btn-primary btn-block mt-3" href="{{ post.url }}">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+</div>
+</section>

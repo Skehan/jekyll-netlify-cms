@@ -1,0 +1,112 @@
+
+
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar10">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <li class="navbar-brand d-block d-lg-none">
+      <a class="nav-link" href="/"><img class="logo img-fluid" src="img/logo.png" alt="logo" /></a>
+    </li>
+    <div class="navbar-collapse collapse" id="navbar10">
+      <ul class="navbar-nav nav-fill w-100">
+        <li class="nav-item d-md-none d-block">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item dropdown pl-3 {% if page.url == "/casino" %} active {% endif %}
+        {% if page.url == "/casino#new" %} active {% endif %}
+        {% if page.url == "/casino#mobile" %} active {% endif %}">
+        <a class="nav-link dropdown-toggle" href="/casino" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Casinos
+        </a>
+        <div class="dropdown-menu dropdown-menu-right text-center" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" data-sort="rating:desc" href="/casino#rating">Best Online Casinos</a>
+          <a class="dropdown-item" data-sort="new:desc" href="/casino#new">New Online Casinos</a>
+          <a class="dropdown-item" data-sort="mobile:desc" href="/casino#mobile">Mobile Casinos</a>
+          <a class="dropdown-item" data-sort="live:desc" href="/casino#live">Live Casinos</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown pl-3">
+        <a class="nav-link dropdown-toggle" href="/casino" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Games
+        </a>
+        <div class="dropdown-menu dropdown-menu-right text-center" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" data-sort="baccarat:desc"  href="/game#baccarat">Baccarat</a>
+          <a class="dropdown-item"data-sort="blackjack:desc"  href="/game#blackjack">BlackJack</a>
+          <a class="dropdown-item" data-sort="roulette:desc" href="/game#roulette">Roulette</a>
+          <a class="dropdown-item" data-sort="poker:desc" href="/game#poker">Poker</a>
+          <a class="dropdown-item" data-sort="slots:desc" href="/game#slots">Slots</a>
+          <a class="dropdown-item" data-sort="sports:desc" href="/game#sports">Sports</a>
+          <a class="dropdown-item" data-sort="keno:desc" href="/game#keno">Keno</a>
+          <a class="dropdown-item" data-sort="lotteries:desc" href="/game#lotteries">Lotteries</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown pl-3">
+        <a class="nav-link dropdown-toggle" href="/casino" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Boni
+        </a>
+        <div class="dropdown-menu dropdown-menu-right text-center" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" data-sort="all-bonuses:desc" href="/bonus#all-bonuses">Alle Bonusse</a>
+          <a class="dropdown-item" data-sort="min-deposit:desc" href="/bonus#min-deposit">Mindesteinzahlungsbonus</a>
+          <a class="dropdown-item" data-sort="no-deposit:desc" href="/bonus#no-deposit">Keine Anzahlung</a>
+          <a class="dropdown-item" data-sort="freespins:desc" href="/bonus#freespins">Freispiele</a>
+          <a class="dropdown-item" data-sort="reload:desc" href="/bonus#reload">Re-load Bonus</a>
+          <a class="dropdown-item" data-sort="high-roller:desc" href="/bonus#high-roller">High Roller</a>
+          <a class="dropdown-item" data-sort="cash-back:desc" href="/bonus#cash-back">Cash Back</a>
+          <a class="dropdown-item" data-sort="payment-method:desc" href="/bonus#payment-method">Payment Method Bonus</a>
+          <a class="dropdown-item" data-sort="deposit:desc" href="/bonus#deposit">Deposit Match</a>
+          <a class="dropdown-item" data-sort="welcome:desc" href="/bonus#welcome">Willkommensbonus</a>
+        </div>
+      </li>
+      <li class="nav-item d-none d-lg-block">
+        <a class="nav-link" href="/"><img class="logo img-fluid " src="img/logo.png" alt="logo" /></a>
+      </li>
+      <li class="nav-item dropdown pl-3">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Payment
+        </a>
+        <div class="dropdown-menu dropdown-menu-right text-center" aria-labelledby="navbarDropdown">
+          <a href="/payment#paypal" data-sort="paypal:desc"><img class="col-5  p-3 img-fluid navpic" src="img/payments/PayPal.png" alt="PayPal"></a>
+          <a href="/payment#sofort" data-sort="sofort:desc"><img class="col-5  p-3 img-fluid navpic"src="img/payments/sofort.png" alt="Sofort"></a>
+          <a href="/payment#giropay" data-sort="giropay:desc"><img class="col-5  p-3 img-fluid navpic" src="img/payments/giropay.png" alt="Giropay"></a>
+          <a href="/payment#skrill" data-sort="skrill:desc"><img class="col-5  p-3 img-fluid navpic" src="img/payments/skrill.png" alt="Skrill"></a>
+          <a href="/payment#neteller" data-sort="neteller:desc"><img class="col-5  p-3 img-fluid navpic" src="img/payments/neteller.png" alt="Neteller"></a>
+          <a href="/payment#paysafecard" data-sort="paysafecard:desc"><img class="col-5  p-3 img-fluid navpic" src="img/payments/paysafecard.jpg" alt="Paysafecard"></a>
+          <a href="/payment#clicknpay" data-sort="clicknpay:desc"><img class="col-5  p-3 img-fluid navpic" src="img/payments/CnP.jpg" alt="Click n Pay"></a>
+          <a href="/payment#bank" class="col-5  link"data-sort="bank:desc" ><img class="col-5  p-3 img-fluid navpic" src="img/payments/bank.png" alt="Bank"></a>
+          <a href="/payment#crypto" class="col-5  link" data-sort="crypto:desc"><img class="col-5  p-3 img-fluid navpic" src="img/payments/crypto.png" alt="Crypto"></a>
+        </div>
+      </li>
+      <li class="nav-item dropdown pl-3">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Software
+        </a>
+        <div class="dropdown-menu dropdown-menu-right text-center" aria-labelledby="navbarDropdown">
+
+              <a href="/software#merkur" data-sort="merkur:desc"><img class="col-5 p-3 img-fluid navpic" src="img/software/merkur.png" alt="Merkur"></a>
+              <a href="/software#novo" data-sort="novo:desc"><img class="col-5 p-3 img-fluid navpic" src="img/software/novo.png" alt="Novo"></a>
+              <a href="/software#amaya" data-sort="amaya:desc"><img class="col-5 p-3 img-fluid navpic" src="img/software/amaya.jpeg" alt="Amaya"></a>
+              <a href="/software#microgaming" data-sort="microgaming:desc"><img class="col-5 p-3 img-fluid navpic" src="img/software/microgaming-casinos-uk.jpg" alt="MicroGaming"></a>
+              <a href="/software#netent" data-sort="netent:desc"><img class="col-5 p-3 img-fluid navpic" src="img/software/netent-logo-whitegreen.jpg" alt="NetEnt"></a>
+
+              <a href="/software#skillonnet" data-sort="skillonnet:desc"><img class="col-5 p-3 img-fluid navpic" src="img/software/skillonnet.jpg" alt="skillonnet"></a>
+              <a href="/software#nextgen" data-sort="nextgen:desc"><img class="col-5 p-3 img-fluid navpic" src="img/software/nextgen.png" alt="nextgengaming"></a>
+
+
+
+              <a href="/software#nyx" data-sort="nyx:desc"><img class="col-5 p-3 img-fluid navpic" src="img/software/nyx.png" alt="NYX"></a>
+              <a href="/software#playngo" data-sort="playngo:desc"><img class="col-5 p-3 img-fluid navpic" src="img/software/play'n'go.png" alt="PlaynGo"></a>
+              <a href="/software#evolution" data-sort="evolution:desc"><img class="col-5 p-3 img-fluid navpic" src="img/software/evolution-gaming-logo.jpg" alt="Evolution Gaming"></a>
+              <a href="/software#ygg" data-sort="ygg:desc"><img class="col-5 p-3 img-fluid navpic" src="img/software/yggdrasil.png" alt="yggdrasil"></a>
+              <a href="/software#sg" data-sort="sg:desc"><img class="col-5 p-3 img-fluid navpic" src="img/software/sg-logo-color-2017.png" alt="SG Interactive"></a>
+
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/blog">Blog</a>
+      </li>
+    </ul>
+  </div>
+</div>
+</nav>

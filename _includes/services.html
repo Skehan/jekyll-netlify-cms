@@ -1,0 +1,36 @@
+<!-- Service Start -->
+
+<section id="service" class="bg-white service">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-title wobble">
+          <h2>Beste Casino Deutschland</h2>
+          <p>Was wir anbieten</p>
+        </div>
+      </div>
+    </div>
+    <div class="row ">
+      {% for service in site.data.services  %}
+
+      <div class="col-6 col-md-4">
+              <a href="{{ service.link }}">
+        <div class="service-item">
+          <i class="{{ service.icon }}"></i>
+          <h4>{{ service.title }}</h4>
+          <p>{{ service.content}}</p>
+        </div>
+              </a>
+      </div>
+
+      {% endfor %}
+    </div>
+  </div>
+  <!-- <button type="button" href="#top" class="btn btn-success prev-section2"> <i class="fa fa-arrow-circle-up"></i>   </button> -->
+  <div class="m-4">
+
+
+
+  </div>
+
+</section>
